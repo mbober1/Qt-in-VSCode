@@ -6,7 +6,7 @@ Coding -> **VSCode**
 
 UI Designing -> **Qt Designer**
 
-### Compileing
+### Compiling
 ```
 mkdir build
 cd build
