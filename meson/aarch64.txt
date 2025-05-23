@@ -1,0 +1,12 @@
+[binaries]
+c = 'aarch64-none-linux-gnu-gcc'
+cpp = 'aarch64-none-linux-gnu-g++'
+ar = 'aarch64-none-linux-gnu-ar'
+strip = 'aarch64-none-linux-gnu-strip'
+pkgconfig = 'pkg-config'
+
+[host_machine]
+system = 'linux'
+cpu_family = 'x86_64'
+cpu = 'x86_64'
+endian = 'little'

@@ -1,0 +1,28 @@
+{
+  "name": "vscode-qt5",
+  "dockerFile": "Dockerfile",
+
+  "containerEnv": {
+    "DISPLAY": "${localEnv:DISPLAY}",
+    "XDG_RUNTIME_DIR": "/home/user"
+  },
+
+  "mounts": [
+    "source=/tmp/.X11-unix/,target=/tmp/.X11-unix/,type=bind"
+  ],
+
+  "workspaceMount": "source=${localWorkspaceFolder},target=/home/user/workspace,type=bind",
+  "workspaceFolder": "/home/user/workspace",
+
+  "customizations": {
+    "vscode": {
+      "settings": {
+        "terminal.integrated.defaultProfile.linux" : "bash",
+        "extensions.ignoreRecommendations": true
+      },
+      "extensions": [
+        "ms-vscode.cpptools",
+      ]
+    }
+  } 
+}

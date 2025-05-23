@@ -2,31 +2,31 @@
   "version": "0.2.0",
   "configurations": [
     {
-      "name": "(gdb) Launch",
+      "name": "Launch localy",
       "type": "cppdbg",
       "request": "launch",
-      "preLaunchTask": "Build target",
+      "preLaunchTask": "Build (debug)",
       "program": "${workspaceFolder}/build/qt_test",
       "args": [],
-      "stopAtEntry": true,
+      "stopAtEntry": false,
       "cwd": "${workspaceFolder}",
       "environment": [],
       "externalConsole": false,
       "MIMode": "gdb",
-      "setupCommands": [
-          {
-              "description": "Enable pretty-printing for gdb",
-              "text": "-enable-pretty-printing",
-              "ignoreFailures": true
-          },
-          {
-              "description": "Set Disassembly Flavor to Intel",
-              "text": "-gdb-set disassembly-flavor intel",
-              "ignoreFailures": true
-          }
-      ]
+    },
+    {
+      "name": "Launch remote",
+      "type": "cppdbg",
+      "request": "launch",
+      "preLaunchTask": "Build (debug) for ARM64",
+      "program": "${workspaceRoot}/build/qt_test",
+      "miDebuggerServerAddress": "localhost:9091",
+      "args": [],
+      "stopAtEntry": false,
+      "cwd": "${workspaceRoot}",
+      "environment": [],
+      "externalConsole": true,
+      "MIMode": "gdb",
     }
-
   ]
-
 }
